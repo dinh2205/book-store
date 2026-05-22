@@ -152,15 +152,15 @@ function addNewProduct(){
     const price =
         document.getElementById("price").value;
 
+    const img =
+        document.getElementById("img").value;
+
     const desc =
         document.getElementById("desc").value;
 
-    const imgFile =
-        document.getElementById("img").files[0];
 
 
-
-    if(name === "" || price === "" || !imgFile){
+    if(name === "" || price === "" || img === ""){
 
         alert("Vui lòng nhập đầy đủ!");
 
@@ -170,53 +170,41 @@ function addNewProduct(){
 
 
 
-    const reader = new FileReader();
+    const newProduct = {
 
+        id: Date.now(),
 
+        name: name,
 
-    reader.onload = function(e){
+        price: price,
 
-        const newProduct = {
+        img: img,
 
-            id: Date.now(),
-
-            name: name,
-
-            price: price,
-
-            img: e.target.result,
-
-            desc: desc
-
-        };
-
-
-
-        products.push(newProduct);
-
-        saveData();
-
-        loadAllproducts();
-
-
-
-        document.getElementById("name").value = "";
-
-        document.getElementById("price").value = "";
-
-        document.getElementById("img").value = "";
-
-        document.getElementById("desc").value = "";
-
-
-
-        alert("Đã thêm sách!");
+        desc: desc
 
     };
 
 
 
-    reader.readAsDataURL(imgFile);
+    products.push(newProduct);
+
+    saveData();
+
+    loadAllproducts();
+
+
+
+    document.getElementById("name").value = "";
+
+    document.getElementById("price").value = "";
+
+    document.getElementById("img").value = "";
+
+    document.getElementById("desc").value = "";
+
+
+
+    alert("Đã thêm sách!");
 
 }
 
