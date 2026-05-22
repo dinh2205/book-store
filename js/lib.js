@@ -146,41 +146,36 @@ function loadAllproducts(){
 
 function addNewProduct(){
 
-    const name = document.getElementById("name").value;
+    const name =
+        document.getElementById("name").value;
 
-    const price = document.getElementById("price").value;
+    const price =
+        document.getElementById("price").value;
 
-    const desc = document.getElementById("desc").value;
+    const desc =
+        document.getElementById("desc").value;
+
+    const imgFile =
+        document.getElementById("img").files[0];
 
 
 
-    // FILE IMAGE
-    const img = document.getElementById("img").value;
-
-
-
-    // VALIDATE
-    if(name === "" ||price === "" || !img){
+    if(name === "" || price === "" || !imgFile){
 
         alert("Vui lòng nhập đầy đủ!");
 
         return;
+
     }
 
 
 
-    // FILE READER
     const reader = new FileReader();
 
 
 
     reader.onload = function(e){
 
-        const base64Image = e.target.result;
-
-
-
-        // PRODUCT
         const newProduct = {
 
             id: Date.now(),
@@ -189,7 +184,7 @@ function addNewProduct(){
 
             price: price,
 
-            img: base64Image,
+            img: e.target.result,
 
             desc: desc
 
@@ -197,22 +192,14 @@ function addNewProduct(){
 
 
 
-        // PUSH
         products.push(newProduct);
 
-
-
-        // SAVE
         saveData();
 
-
-
-        // LOAD
         loadAllproducts();
 
 
 
-        // RESET
         document.getElementById("name").value = "";
 
         document.getElementById("price").value = "";
@@ -229,7 +216,6 @@ function addNewProduct(){
 
 
 
-    // ĐỌC FILE
     reader.readAsDataURL(imgFile);
 
 }
