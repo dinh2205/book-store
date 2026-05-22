@@ -160,7 +160,7 @@ function addNewProduct(){
 
 
     // VALIDATE
-    if(name === "" ||price === "" || !imgFile){
+    if(name === "" ||price === "" || !img){
 
         alert("Vui lòng nhập đầy đủ!");
 
