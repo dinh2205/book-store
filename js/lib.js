@@ -1,85 +1,62 @@
 
 
 let products =
-JSON.parse(localStorage.getItem("products")) || [];
+    JSON.parse(localStorage.getItem("products")) || [];
 
 
 
-function saveData(){
+function saveData() {
 
-    localStorage.setItem(
-        "products",
-        JSON.stringify(products)
-    );
+    localStorage.setItem("products", JSON.stringify(products));
 
 }
 
 
 
-function addproduct(p){
+function addproduct(p) {
 
-    const productList =
-        document.getElementById("product-list");
-
-
+    const productList = document.getElementById("product-list");
 
     /* LINK */
-    const link =
-        document.createElement("a");
-
-    link.setAttribute("href","html/sanphamHome.html?id=" + p.id );
-
-    link.setAttribute("class", "book-link" );
+    const link = document.createElement("a");
+    link.setAttribute("href", "html/sanphamHome.html?id=" + p.id);
+    link.setAttribute("class", "book-link");
 
 
 
     /* CARD */
     const card = document.createElement("div");
-
-    card.setAttribute( "class","book-card" );
+    card.setAttribute("class", "book-card");
 
 
 
     /* POSTER */
     const poster = document.createElement("div");
-
-    poster.setAttribute( "class","poster");
+    poster.setAttribute("class", "poster");
 
 
 
     /* IMAGE */
     const img = document.createElement("img");
-
-    img.setAttribute("src",p.img);
+    img.setAttribute("src", p.img);
 
     /* BUTTON XÓA */
     const deleteBtn = document.createElement("button");
-
     deleteBtn.innerText = "Xóa";
-
-    deleteBtn.setAttribute("class","delete-btn");
-
-    deleteBtn.onclick = function(e){
-
+    deleteBtn.setAttribute("class", "delete-btn");
+    deleteBtn.onclick = function (e) {
         e.preventDefault();
-
         deleteProduct(p.id);
-
     };
 
 
 
     /* BUTTON SỬA */
     const editBtn = document.createElement("button");
-
     editBtn.innerText = "Sửa";
-
-    editBtn.setAttribute("class","edit-btn");
-
-    editBtn.onclick = function(e){
-
+    editBtn.setAttribute("class", "edit-btn");
+    editBtn.onclick = function (e) {
         e.preventDefault();
-
         editProduct(p.id);
 
     };
@@ -88,11 +65,8 @@ function addproduct(p){
 
     /* BOX BUTTON */
     const btnBox = document.createElement("div");
-
-    btnBox.setAttribute("class","btn-box" );
-
+    btnBox.setAttribute("class", "btn-box");
     btnBox.appendChild(editBtn);
-
     btnBox.appendChild(deleteBtn);
 
 
@@ -100,35 +74,27 @@ function addproduct(p){
 
     /* GHÉP */
     poster.appendChild(img);
-
     card.appendChild(poster);
-
-
     card.appendChild(btnBox);
-
     link.appendChild(card);
-
     productList.appendChild(link);
 
 }
-
 
 
 /* =========================
    LOAD TOÀN BỘ
 ========================= */
 
-function loadAllproducts(){
+function loadAllproducts() {
 
     const productList = document.getElementById("product-list");
-
 
     /* XÓA CŨ */
     productList.innerHTML = "";
 
-
     /* LOAD */
-    for(let i = 0; i < products.length; i++){
+    for (let i = 0; i < products.length; i++) {
 
         addproduct(products[i]);
 
@@ -142,23 +108,20 @@ function loadAllproducts(){
    THÊM SÁCH
 ========================= */
 
-function addNewProduct(){
+function addNewProduct() {
 
-    const name =
-        document.getElementById("name").value;
+    const name = document.getElementById("name").value;
 
-    const price =
-        document.getElementById("price").value;
+    const price = document.getElementById("price").value;
 
-    const img =
-        document.getElementById("img").value;
+    const desc = document.getElementById("desc").value;
 
-    const desc =
-        document.getElementById("desc").value;
+    const fileInput = document.getElementById("img");
+
+    const file = fileInput.files[0];
 
 
-
-    if(name === "" || price === "" || img === ""){
+    if (name === "" || price === "" || !file) {
 
         alert("Vui lòng nhập đầy đủ!");
 
@@ -167,41 +130,52 @@ function addNewProduct(){
     }
 
 
+    const reader = new FileReader();
 
-    const newProduct = {
+    reader.onload = function (e) {
 
-        id: Date.now(),
+        const newProduct = {
 
-        name: name,
+            id: Date.now(),
 
-        price: price,
+            name: name,
 
-        img: "/book-store/" + img,
-        desc: desc
+            price: price,
+
+            img: e.target.result,
+
+            desc: desc
+
+        };
+
+
+        products.push(newProduct);
+
+
+        /* SAVE */
+        saveData();
+
+
+        /* LOAD */
+        loadAllproducts();
+
+
+        /* RESET INPUT */
+        document.getElementById("name").value = "";
+
+        document.getElementById("price").value = "";
+
+        document.getElementById("img").value = "";
+
+        document.getElementById("desc").value = "";
+
+
+        alert("Đã thêm sách!");
 
     };
 
 
-
-    products.push(newProduct);
-
-    saveData();
-
-    loadAllproducts();
-
-
-
-    document.getElementById("name").value = "";
-
-    document.getElementById("price").value = "";
-
-    document.getElementById("img").value = "";
-
-    document.getElementById("desc").value = "";
-
-
-
-    alert("Đã thêm sách!");
+    reader.readAsDataURL(file);
 
 }
 
@@ -211,7 +185,7 @@ function addNewProduct(){
    XÓA
 ========================= */
 
-function deleteProduct(id){
+function deleteProduct(id) {
 
     const index =
         products.findIndex(
@@ -227,7 +201,6 @@ function deleteProduct(id){
     saveData();
 
 
-
     /* LOAD */
     loadAllproducts();
 
@@ -239,39 +212,33 @@ function deleteProduct(id){
    SỬA
 ========================= */
 
-function editProduct(id){
+function editProduct(id) {
 
     const product = products.find(
-            p => p.id === id
-        );
+        p => p.id === id
+    );
 
-
-
-    const newName = prompt( "Tên mới:",product.name);
-
-
+    const newName = prompt("Tên mới:", product.name);
 
     const newPrice = prompt("Giá mới:", product.price);
 
+    const newDesc = prompt("Mô tả mới:", product.desc);
 
-     const newDesc =prompt( "Mô tả mới:", product.desc);
+    if (newName != null && newName != "") {
 
-
-    if(newName != null && newName != ""){
-        
         product.name = newName;
 
     }
 
 
 
-    if(newPrice != null && newPrice != ""){
+    if (newPrice != null && newPrice != "") {
 
         product.price = newPrice;
 
     }
 
-     if(newDesc != null && newDesc != ""){
+    if (newDesc != null && newDesc != "") {
 
         product.desc = newDesc;
 
@@ -293,7 +260,7 @@ function editProduct(id){
    RESET DATABASE
 ========================= */
 
-function resetDatabase(){
+function resetDatabase() {
 
     localStorage.removeItem("products");
 
@@ -307,7 +274,7 @@ function resetDatabase(){
    AUTO LOAD
 ========================= */
 
-window.onload = function(){
+window.onload = function () {
 
     loadAllproducts();
 
