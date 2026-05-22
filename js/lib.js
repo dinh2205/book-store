@@ -62,14 +62,11 @@ function addproduct(p) {
     };
 
 
-
     /* BOX BUTTON */
     const btnBox = document.createElement("div");
     btnBox.setAttribute("class", "btn-box");
     btnBox.appendChild(editBtn);
     btnBox.appendChild(deleteBtn);
-
-
 
 
     /* GHÉP */
@@ -113,6 +110,7 @@ function addNewProduct() {
     const name = document.getElementById("name").value;
 
     const price = document.getElementById("price").value;
+    
 
     const desc = document.getElementById("desc").value;
 

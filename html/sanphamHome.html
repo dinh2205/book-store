@@ -69,7 +69,8 @@
 
             document.getElementById("p-name").innerText = product.name;
 
-            document.getElementById("p-price").innerText = product.price;
+            document.getElementById("p-price").innerText = Number(product.price).toLocaleString("vi-VN") + " VND";
+
 
             document.getElementById("p-image").src = product.img;
 
