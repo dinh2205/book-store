@@ -176,8 +176,7 @@ function addNewProduct(){
 
         price: price,
 
-        img: img,
-
+        img: "/book-store/" + img,
         desc: desc
 
     };
