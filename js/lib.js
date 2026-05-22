@@ -155,7 +155,7 @@ function addNewProduct(){
 
 
     // FILE IMAGE
-    const imgFile = document.getElementById("img").files[0];
+    const img = document.getElementById("img").value;
 
 
 
