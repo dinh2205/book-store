@@ -1,0 +1,71 @@
+<!Doctype html>
+
+<html lang ="vi">
+
+<head>
+    <meta charset="utf-8">
+    <title> Liên Hệ</title>
+    <link rel="stylesheet" href="../css/stylelienhe.css">
+</head>
+
+<body>
+      
+    <input type="checkbox" id="openLogin" hidden>
+    <header class="header">
+
+        <div class="logo">📚 Book Store</div>
+
+        <nav class="menu">
+
+            <a href="../index.html">Trang Chủ</a>
+            <a href="allsanpham.html">Sản Phẩm</a>
+            <a href="lienhe.html">Liên Hệ</a>
+
+        </nav>
+
+        <label for="openLogin" class="btn-login">Login</label>
+
+    </header>
+
+
+    <div class="login-modal">
+
+        <div class="login-box">
+            <!-- nút đóng -->
+            <label for="openLogin" class="close-btn">✖</label>
+
+            <form action="action_page.html">
+                <label for="tk">Tài khoản:</label><br>
+                <input type="text" id="tk" name="tk"><br>
+
+                <label for="mk">Mật Khẩu:</label><br>
+                <input type="password" id="mk" name="mk"><br><br>
+
+                <input type="submit" value="Đăng Nhập">
+
+                <div class="login-links">
+                    <a href="#">Forgot password?</a>
+                    <a href="#">Create account</a>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+
+    <div class="contact">
+        <h1>Liên Hệ Với Chúng Tôi</h1>
+        <p>Địa chỉ: 123 Đường Sách, Thành Phố Sách, Việt Nam</p>
+        <p>Email: quocdinhvta@gmail.com</p>
+        <p>Điện thoại: 0123 456 789</p>
+        <p>Fanpage: <a class="linkFB" href="https://www.facebook.com/BookStore">https://www.facebook.com/BookStore</a></p>
+        <textarea id="desc" placeholder="Nhập tin nhắn của bạn ở đây..."></textarea>
+        <input type="submit" value="Gửi Tin Nhắn">
+    </div>
+
+
+</body>
+
+
+
+</html>

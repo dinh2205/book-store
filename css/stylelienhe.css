@@ -1,0 +1,250 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('../assets/nenlienhe.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    font-size: 16px;
+    font-weight: 1200;
+    z-index: 10;
+    backdrop-filter: blur(6px);
+
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.6),
+            transparent);
+}
+
+
+
+.logo {
+    color: white;
+     font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap:45px;
+}
+
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin-left: 45px;
+    font-size: 22px;
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+
+
+.menu a:hover {
+    color: #facc15;
+    transform: scale(1.3);
+}
+
+
+
+.btn-login {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+/* Hover login */
+
+.btn-login:hover {
+    background: #facc15;
+    color: black;
+    border-color: #facc15;
+}
+
+
+
+
+.login-modal {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.6);
+
+    display: none;
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 10;
+}
+
+
+
+#openLogin:checked~.login-modal {
+    display: flex;
+}
+
+
+.login-box {
+    width: 90%;
+    max-width: 400px;
+    height: 250px;
+    background: #020617;
+    padding: 25px;
+    border-radius: 10px;
+    position: relative;
+    color: white;
+}
+
+
+/* Nút đóng modal */
+
+.close-btn {
+    position: absolute;
+
+    top: 10px;
+    right: 12px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+
+/* Ô nhập tài khoản + mật khẩu */
+
+.login-box input[type="text"],
+.login-box input[type="password"] {
+    width: 90%;
+    padding: 6px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+
+/* Nút submit */
+
+.login-box input[type="submit"] {
+
+    width: 30%;
+
+    background: linear-gradient(135deg,
+            #facc15,
+            #fbbf24);
+
+    color: black;
+    border: none;
+    padding: 11px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+
+/* Hover input */
+
+.login-box input:hover {
+    border-color: orange;
+    transform: scale(1.05);
+}
+
+
+
+/* =======================================================
+   LOGIN LINKS
+======================================================= */
+
+.login-links {
+
+    margin-top: 18px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-size: 13px;
+}
+
+
+/* Link forgot password */
+
+.login-links a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+
+/* Hover link */
+
+.login-links a:hover {
+    text-decoration: underline;
+}
+
+.contact 
+{
+    background: rgba(7, 16, 66, 0.75);
+    color: white;
+    padding: 30px;
+    margin: 60px auto;
+    width: 40%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+}
+
+.linkFB {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+textarea {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    
+    font-size: 16px;
+}
+
+.contact input[type="submit"] {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background:rgba(48, 46, 46, 0.307);
+  color: rgb(255, 255, 255);
+  border: none;
+  width: 30%;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.contact input[type="submit"]:hover {
+  background: #fbbf24;
+  transform: scale(1.05);
+  color: black;
+}
