@@ -27,6 +27,8 @@
         <label for="openLogin" class="btn-login">Login</label>
     </header>
 
+
+
     <div class="login-modal">
         <div class="login-box">
 
@@ -54,17 +56,43 @@
 
     <div id="product-list">
 
-
     </div>
+        <input type="checkbox" id="openAddsach" hidden>
+
+<label for="openAddsach"
+       class="btn-watch"
+       onclick="editId = null">
+
+    Thêm Sách
+
+</label>
+
+<div class="add-modal">
+    
+    <div class="add-form">
+        <label for="openAddsach" class="closeadd-btn">✖</label>
+
+        <h1 style="color: white;"> Thêm Sách Mới</h1>
+        <input type="text" id="name" placeholder="Tên sách">
+
+        <input type="number" id="price" placeholder="Giá sách">
+
+        <input type="file" id="img" accept="image/*">
+
+        <textarea id="desc" placeholder="Mô tả sách"></textarea>
+
+        <button class="btn-watchh" onclick="saveProduct()">
+            Thêm sách
+        </button>
+    </div>
+</div>
 
 
-
-
-
+        <!-- Modal thêm sách     
         <div class="copyright">
             © 2026 Movie Website | Designed by Trần Quốc Đỉnh
         </div>
-
+    -->
 </body>
 
 

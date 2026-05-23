@@ -201,7 +201,7 @@ body {
 
 
 #product-list {
-    width: 90%;
+    width: 100%;
     margin: 40px auto;
     display: flex;
     flex-wrap: wrap;
@@ -212,10 +212,13 @@ body {
 
 .product-item {
     background: rgba(255,255,255,0.08);
-    width: 250px;
+    width: 220px;
     border-radius: 20px;
     box-shadow: 0 0 15px rgba(0,0,0,0.5);
     transition: 0.4s;
+
+    display: flex;
+    flex-direction: column;
 }
 
 .product-item:hover {
@@ -226,7 +229,7 @@ body {
 
 .product-image img {
     width: 100%;
-    height: 380px;
+    height: 290px;
     object-fit: cover;
 }
 
@@ -234,33 +237,37 @@ body {
 .product-info {
     padding: 20px;
     color: white;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
-.product-info p:nth-child(1) {
+.book-name{
     font-size: 24px;
     font-weight: bold;
+    color: white;
     margin-bottom: 10px;
 }
 
-.product-info p:nth-child(2) {
-    color: gold;
+.book-price{
     font-size: 20px;
+    color: gold;
     margin-bottom: 15px;
 }
 
 
 .product-info a {
     display: inline-block;
-
+    margin-top: auto;
     padding: 10px 18px;
     background: gold;
     color: black;
-
     text-decoration: none;
     border-radius: 10px;
-
     font-weight: bold;
     transition: 0.3s;
+    text-align: center;
+    font-family: Arial
 }
 
 .product-info a:hover {
@@ -268,81 +275,224 @@ body {
     transform: scale(1.05);
 }
 
+/*Tao Them Sach*/
 
-.login-modal {
+.btn-watch {
+    display: block;
+    width: fit-content;
+
+    background: #facc15;
+    color: black;
+
+    padding: 10px 20px;
+    border-radius: 8px;
+
+    font-weight: bold;
+    font-size: 16px;
+
+    cursor: pointer;
+    transition: 0.3s;
+
+    margin: 50px auto;
+}
+
+.btn-watch:hover {
+    background: #f5b30e;
+    transform: scale(1.05);
+}
+
+.btn-watchh{
+    background: #facc15;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.add-form{
+    position:relative;
+    width:30%;
+    padding:30px;
+    padding-top:30px;
+    border-radius:12px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:15px;
+    margin:60px auto;
+    flex-wrap:wrap;
+    background: #02071a;
+}
+
+.add-form input{
+    width:220px;
+    padding:14px 16px;
+    border:none;
+    border-radius:10px;
+    background:#0f172a;
+    color:white;
+    font-size:16px;
+    outline:none;
+    transition:0.3s;
+    box-shadow:0 4px 15px rgba(0,0,0,0.3);
+}
+
+.add-form input:focus{
+
+    border:1px solid #facc15;
+    transform:scale(1.03);
+}
+
+
+
+.add-form button{
+
+    padding:14px 28px;
+    border:none;
+    border-radius:12px;
+    background:#facc15;
+    color:black;
+    font-weight:bold;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+    box-shadow:0 5px 15px rgba(250,204,21,0.3);
+}
+
+
+
+
+
+.add-form button:hover{
+    transform:translateY(-3px);
+    background:#fde047;
+}
+
+
+.add-form textarea{
+    width:500px;
+    height:100px;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    background:#0f172a;
+    color:white;
+    font-size:15px;
+    outline:none;
+    resize:none;
+    margin-top:10px;
+}
+
+
+.add-form textarea::placeholder{
+
+    color:#94a3b8;
+}
+
+
+.add-form textarea:focus{
+
+    border:1px solid #facc15;
+}
+
+.delete-btn {
+    margin:10px;
+    background: rgba(255, 0, 0, 0.8);
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: 0.3s;
+
+}
+.delete-btn:hover {
+    background: rgba(255, 0, 0, 1);
+    transform: scale(1.1);
+}
+
+.edit-btn {
+    background: rgba(0, 128, 255, 0.8);
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: 0.3s;
+    margin:10px;
+}
+.edit-btn:hover {
+    background: rgba(0, 128, 255, 1);
+    transform: scale(1.1);
+}
+
+
+
+.add-modal{
     position: fixed;
     inset: 0;
-
-    background: rgba(0,0,0,0.7);
-
+    background: rgba(0,0,0,0.6);
     display: none;
     justify-content: center;
     align-items: center;
-
-    z-index: 2000;
+    z-index: 100;
 }
 
-#openLogin:checked ~ .login-modal {
-    display: flex;
+#openAddsach:checked ~ .add-modal{
+
+    display:flex;
 }
 
-.login-box {
-    width: 350px;
-    padding: 30px;
-
-    background: #020617;
-    border-radius: 20px;
-
-    position: relative;
-}
-
-.login-box label {
-    color: white;
-}
-
-.login-box input[type="text"],
-.login-box input[type="password"] {
-    width: 90%;
-    padding: 10px;
-    margin-top: 8px;
-    margin-bottom: 15px;
-    border: none;
-    border-radius: 8px;
-}
-
-.login-box input[type="submit"] {
-    width: 30%;
-    padding: 12px;
-    border: none;
-    border-radius: 10px;
-    background: gold;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
-    margin-bottom: 10px;
-}
-
-.login-box input[type="submit"]:hover {
-    background: orange;
-}
-
-.close-btn {
+.closeadd-btn {
     position: absolute;
     top: 10px;
-    right: 15px;
-
-    color: white;
-    font-size: 22px;
+    right: 12px;
     cursor: pointer;
+    font-size: 30px;
+    color: rgb(247, 12, 12);
+    font-weight: bold;
+
+}
+
+.btn-box{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    margin-top:10px;
 }
 
 
-.copyright {
-    text-align: center;
+/*Button Sửa*/
+.edit-btn {
+    background: rgba(0, 128, 255, 0.8);
     color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: 0.3s;
+    margin:10px;
+   width: 100px;
+   
+}
 
-    padding: 25px;
-    margin-top: 40px;
-
-    background: rgba(0,0,0,0.7);
+/*Button Xóa*/
+.delete-btn {
+    margin:10px;
+    background: rgba(255, 0, 0, 0.8);
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: 0.3s;
+    width: 100px;
+    
 }
