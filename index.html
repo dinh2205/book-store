@@ -1,90 +1,100 @@
-<!Doctype html>
-<!-- update -->
+<!DOCTYPE html>
 <html lang="vi">
 
 <head>
+
     <meta charset="utf-8">
-    <title> Peak Book</title>
+
+    <title>Peak Book</title>
+
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/lib.js"></script>
 
 </head>
 
-
-
 <body>
+
+    <!-- LOGIN -->
+
     <input type="checkbox" id="openLogin" hidden>
+
+    <!-- HEADER -->
+
     <header class="header">
-        <div class="logo">📚 Book Store</div>
+
+        <div class="logo">
+            📚 Book Store
+        </div>
 
         <nav class="menu">
+
             <a href="index.html">Trang Chủ</a>
+
             <a href="html/allsanpham.html">Sản Phẩm</a>
+
             <a href="html/lienhe.html">Liên Hệ</a>
+
         </nav>
 
-        <label for="openLogin" class="btn-login">Login</label>
+        <label for="openLogin" class="btn-login">
+
+            Login
+
+        </label>
+
     </header>
 
 
 
+    <!-- HERO -->
+
     <section class="hero">
-        <div class="anh-nen">
-            <img src="assets/sachnen.jpg" alt="Background" class="hero-video">
-        </div>
 
         <div class="hero-content">
-            <p class="tag">CHÀO MỪNG ĐẾN VỚI BOOK STORE</p>
+
+            <p class="tag">
+                CHÀO MỪNG ĐẾN VỚI BOOK STORE
+            </p>
 
             <h1 class="title">
                 Khám phá thế giới sách
             </h1>
 
             <p class="desc">
-                Cung cấp nhiều đầu sách nổi bật từ truyện tranh,
-                tiểu thuyết, sách kỹ năng đến các tác phẩm kinh điển.
+
+                Cung cấp nhiều đầu sách nổi bật từ
+                truyện tranh, tiểu thuyết, sách kỹ năng
+                đến các tác phẩm kinh điển.
+
                 Khám phá không gian đọc sách hiện đại,
                 nơi mỗi cuốn sách đều mang đến
                 những kiến thức và cảm hứng mới cho bạn.
+
             </p>
-            <a href="html/allsanpham.html"><button class="btn-watch">Xem Sản Phẩm Ngay</button></a>
+
+            <a href="html/allsanpham.html">
+
+                <button class="btn-watch">
+
+                    Xem Sản Phẩm Ngay
+
+                </button>
+
+            </a>
+
         </div>
-
-
 
     </section>
 
 
-    <div class="login-modal">
-        <div class="login-box">
 
-            <!-- nút đóng -->
-            <label for="openLogin" class="close-btn">✖</label>
-
-            <form action="action_page.html">
-                <label for="tk">Tài khoản:</label><br>
-                <input type="text" id="tk" name="tk"><br>
-
-                <label for="mk">Mật Khẩu:</label><br>
-                <input type="password" id="mk" name="mk"><br><br>
-
-                <input type="submit" value="Đăng Nhập">
-
-                <div class="login-links">
-                    <a href="#">Forgot password?</a>
-                    <a href="#">Create account</a>
-                </div>
-            </form>
-
-        </div>
-    </div>
-
-
+    <!-- FOOTER -->
 
     <footer class="footer">
+
         <div class="footer-container">
+
             <div class="footer-col">
-                <h3>Tran Quoc Dinh</h3>
+                <h3>Trần Quốc Đỉnh</h3>
             </div>
 
             <div class="footer-col">
@@ -92,7 +102,7 @@
             </div>
 
             <div class="footer-col">
-                <h3>DA24TTA - Cong Nghe Thong Tin</h3>
+                <h3>DA24TTA - Công Nghệ Thông Tin</h3>
             </div>
 
             <div class="footer-col">
@@ -100,16 +110,62 @@
             </div>
 
         </div>
+
     </footer>
 
-                <div class="copyright">
-                    © 2026 Movie Website | Designed by Trần Quốc Đỉnh
-                </div>
-           
 
+
+    <div class="copyright">
+
+        © 2026 Book Store |
+        Designed by Trần Quốc Đỉnh
+
+    </div>
+
+
+
+    <!-- LOGIN MODAL -->
+
+    <div class="login-modal">
+
+        <div class="login-box">
+
+            <label for="openLogin" class="close-btn">
+
+                ✖
+
+            </label>
+
+            <form>
+
+                <label>Tài khoản:</label><br>
+
+                <input type="text"><br>
+
+                <label>Mật khẩu:</label><br>
+
+                <input type="password"><br><br>
+
+                <input type="submit" value="Đăng Nhập">
+
+                <div class="login-links">
+
+                    <a href="#">
+                        Forgot password?
+                    </a>
+
+                    <a href="#">
+                        Create account
+                    </a>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
 
 </body>
-
-
 
 </html>

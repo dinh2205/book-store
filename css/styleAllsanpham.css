@@ -201,12 +201,12 @@ body {
 
 
 #product-list {
-    width: 100%;
+    width: 90%;
     margin: 40px auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 30px;
+    gap: 50px;
 }
 
 

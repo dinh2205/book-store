@@ -1,12 +1,12 @@
-let products =
-    JSON.parse(localStorage.getItem("products")) || [
+let defaultProducts = [
         {
             id: 1,
             name: "Đắc Nhân Tâm",
             price: "120000",
             img: "../assets/sach1.jpg",
             productLink: "sanpham.html",
-            desc: "Cuốn sách nổi tiếng của Dale Carnegie giúp cải thiện kỹ năng giao tiếp, ứng xử và xây dựng các mối quan hệ trong cuộc sống."
+            desc: "Cuốn sách nổi tiếng của Dale Carnegie giúp cải thiện kỹ năng giao tiếp, ứng xử và xây dựng các mối quan hệ trong cuộc sống.",
+            custom: false
         },
 
         {
@@ -15,7 +15,8 @@ let products =
             price: "95000",
             img: "../assets/sach2.jpg",
             productLink: "sanpham.html",
-            desc: "Một câu chuyện nhẹ nhàng và sâu lắng về tình yêu dành cho sách cùng những góc khuất trong tâm hồn con người."
+            desc: "Một câu chuyện nhẹ nhàng và sâu lắng về tình yêu dành cho sách cùng những góc khuất trong tâm hồn con người.",
+            custom: false
         },
 
         {
@@ -24,7 +25,8 @@ let products =
             price: "110000",
             img: "../assets/sach3.jpg",
             productLink: "sanpham.html",
-            desc: "Tác phẩm chữa lành mang màu sắc huyền bí, kể về những con người tìm thấy sự đồng cảm trong đêm tối."
+            desc: "Tác phẩm chữa lành mang màu sắc huyền bí, kể về những con người tìm thấy sự đồng cảm trong đêm tối.",
+            custom: false
         },
 
         {
@@ -33,7 +35,8 @@ let products =
             price: "88000",
             img: "../assets/sach4.jpg",
             productLink: "sanpham.html",
-            desc: "Tuyển tập truyện kinh dị hấp dẫn với bầu không khí rùng rợn và nhiều tình tiết bất ngờ."
+            desc: "Tuyển tập truyện kinh dị hấp dẫn với bầu không khí rùng rợn và nhiều tình tiết bất ngờ.",
+            custom: false
         },
 
         {
@@ -42,7 +45,8 @@ let products =
             price: "150000",
             img: "../assets/sach5.jpg",
             productLink: "sanpham.html",
-            desc: "Tiểu thuyết kinh dị nổi tiếng của Stephen King với nội dung ly kỳ và đầy ám ảnh."
+            desc: "Tiểu thuyết kinh dị nổi tiếng của Stephen King với nội dung ly kỳ và đầy ám ảnh.",
+            custom: false
         },
 
         {
@@ -51,7 +55,8 @@ let products =
             price: "135000",
             img: "../assets/sach6.jpg",
             productLink: "sanpham.html",
-            desc: "Cuốn sách tâm lý giúp thấu hiểu sự khác biệt giữa nam và nữ trong tình yêu và cuộc sống."
+            desc: "Cuốn sách tâm lý giúp thấu hiểu sự khác biệt giữa nam và nữ trong tình yêu và cuộc sống.",
+            custom: false
         },
 
         {
@@ -60,7 +65,8 @@ let products =
             price: "99000",
             img: "../assets/sach7.jpg",
             productLink: "sanpham.html",
-            desc: "Tác phẩm nổi tiếng của Thiền sư Thích Nhất Hạnh giúp con người tìm thấy sự bình an nội tâm."
+            desc: "Tác phẩm nổi tiếng của Thiền sư Thích Nhất Hạnh giúp con người tìm thấy sự bình an nội tâm.",
+            custom: false
         },
 
         {
@@ -69,10 +75,20 @@ let products =
             price: "145000",
             img: "../assets/sach8.jpg",
             productLink: "sanpham.html",
-            desc: "Cuốn sách nổi tiếng của Nguyên Phong bàn về luật nhân quả, luân hồi và giá trị cuộc sống."
+            desc: "Cuốn sách nổi tiếng của Nguyên Phong bàn về luật nhân quả, luân hồi và giá trị cuộc sống.",
+            custom: false
         }
 
     ];
+let products =
+    JSON.parse(localStorage.getItem("products"));
+
+if (!products) {
+
+    products = defaultProducts;
+
+    saveData();
+}
 
 
 /* =========================
@@ -246,7 +262,11 @@ function addproduct(p) {
 
     infoDiv.appendChild(link);
 
+    if (p.custom === true) {
+
     infoDiv.appendChild(btnBox);
+
+}
 
 
 
@@ -333,7 +353,8 @@ function addNewProduct() {
 
             productLink: "sanpham.html",
 
-            desc: desc
+            desc: desc,
+            custom: true
 
         };
 
@@ -504,7 +525,9 @@ function saveProduct() {
 
             productLink: "sanpham.html",
 
-            desc: desc
+            desc: desc,
+            custom: true
+        
 
         };
 
