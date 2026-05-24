@@ -1,89 +1,120 @@
+/* =========================
+   DATABASE MẶC ĐỊNH
+========================= */
+
 let defaultProducts = [
-        {
-            id: 1,
-            name: "Đắc Nhân Tâm",
-            price: "120000",
-            img: "../assets/sach1.jpg",
-            productLink: "sanpham.html",
-            desc: "Cuốn sách nổi tiếng của Dale Carnegie giúp cải thiện kỹ năng giao tiếp, ứng xử và xây dựng các mối quan hệ trong cuộc sống.",
-            custom: false
-        },
 
-        {
-            id: 2,
-            name: "Người Gác Kệ Sách",
-            price: "95000",
-            img: "../assets/sach2.jpg",
-            productLink: "sanpham.html",
-            desc: "Một câu chuyện nhẹ nhàng và sâu lắng về tình yêu dành cho sách cùng những góc khuất trong tâm hồn con người.",
-            custom: false
-        },
+    {
+        id: 1,
+        name: "Đắc Nhân Tâm",
+        price: "120000",
+        img: "../assets/sach1.jpg",
+        productLink: "sanpham.html",
+        desc: "Cuốn sách nổi tiếng của Dale Carnegie giúp cải thiện kỹ năng giao tiếp.",
+        custom: false
+    },
 
-        {
-            id: 3,
-            name: "Tiệm Giặt Là Nửa Đêm",
-            price: "110000",
-            img: "../assets/sach3.jpg",
-            productLink: "sanpham.html",
-            desc: "Tác phẩm chữa lành mang màu sắc huyền bí, kể về những con người tìm thấy sự đồng cảm trong đêm tối.",
-            custom: false
-        },
+    {
+        id: 2,
+        name: "Người Gác Kệ Sách",
+        price: "95000",
+        img: "../assets/sach2.jpg",
+        productLink: "sanpham.html",
+        desc: "Một câu chuyện nhẹ nhàng và sâu lắng.",
+        custom: false
+    },
 
-        {
-            id: 4,
-            name: "Tắt Đèn Nghe Chuyện Cố Ám",
-            price: "88000",
-            img: "../assets/sach4.jpg",
-            productLink: "sanpham.html",
-            desc: "Tuyển tập truyện kinh dị hấp dẫn với bầu không khí rùng rợn và nhiều tình tiết bất ngờ.",
-            custom: false
-        },
+    {
+        id: 3,
+        name: "Tiệm Giặt Là Nửa Đêm",
+        price: "110000",
+        img: "../assets/sach3.jpg",
+        productLink: "sanpham.html",
+        desc: "Tác phẩm chữa lành mang màu sắc huyền bí.",
+        custom: false
+    },
 
-        {
-            id: 5,
-            name: "The Dead Zone",
-            price: "150000",
-            img: "../assets/sach5.jpg",
-            productLink: "sanpham.html",
-            desc: "Tiểu thuyết kinh dị nổi tiếng của Stephen King với nội dung ly kỳ và đầy ám ảnh.",
-            custom: false
-        },
+    {
+        id: 4,
+        name: "Tắt Đèn Nghe Chuyện Cố Ám",
+        price: "88000",
+        img: "../assets/sach4.jpg",
+        productLink: "sanpham.html",
+        desc: "Tuyển tập truyện kinh dị hấp dẫn.",
+        custom: false
+    },
 
-        {
-            id: 6,
-            name: "Đàn Ông Sao Hỏa Đàn Bà Sao Kim",
-            price: "135000",
-            img: "../assets/sach6.jpg",
-            productLink: "sanpham.html",
-            desc: "Cuốn sách tâm lý giúp thấu hiểu sự khác biệt giữa nam và nữ trong tình yêu và cuộc sống.",
-            custom: false
-        },
+    {
+        id: 5,
+        name: "The Dead Zone",
+        price: "150000",
+        img: "../assets/sach5.jpg",
+        productLink: "sanpham.html",
+        desc: "Tiểu thuyết kinh dị nổi tiếng.",
+        custom: false
+    },
 
-        {
-            id: 7,
-            name: "Không Diệt Không Sinh Đừng Sợ Hãi",
-            price: "99000",
-            img: "../assets/sach7.jpg",
-            productLink: "sanpham.html",
-            desc: "Tác phẩm nổi tiếng của Thiền sư Thích Nhất Hạnh giúp con người tìm thấy sự bình an nội tâm.",
-            custom: false
-        },
+    {
+        id: 6,
+        name: "Đàn Ông Sao Hỏa Đàn Bà Sao Kim",
+        price: "135000",
+        img: "../assets/sach6.jpg",
+        productLink: "sanpham.html",
+        desc: "Cuốn sách tâm lý nổi tiếng.",
+        custom: false
+    },
 
-        {
-            id: 8,
-            name: "Muôn Kiếp Nhân Sinh",
-            price: "145000",
-            img: "../assets/sach8.jpg",
-            productLink: "sanpham.html",
-            desc: "Cuốn sách nổi tiếng của Nguyên Phong bàn về luật nhân quả, luân hồi và giá trị cuộc sống.",
-            custom: false
-        }
+    {
+        id: 7,
+        name: "Không Diệt Không Sinh Đừng Sợ Hãi",
+        price: "99000",
+        img: "../assets/sach7.jpg",
+        productLink: "sanpham.html",
+        desc: "Tác phẩm của Thiền sư Thích Nhất Hạnh.",
+        custom: false
+    },
 
-    ];
-let products =
-    JSON.parse(localStorage.getItem("products"));
+    {
+        id: 8,
+        name: "Muôn Kiếp Nhân Sinh",
+        price: "145000",
+        img: "../assets/sach8.jpg",
+        productLink: "sanpham.html",
+        desc: "Cuốn sách nổi tiếng của Nguyên Phong.",
+        custom: false
+    }
 
-if (!products) {
+];
+
+
+/* =========================
+   LOAD DATABASE
+========================= */
+
+let products = [];
+
+let editId = null;
+
+try {
+
+    const data =
+        JSON.parse(
+            localStorage.getItem("products")
+        );
+
+    if (Array.isArray(data)) {
+
+        products = data;
+
+    } else {
+
+        products = defaultProducts;
+
+        saveData();
+    }
+
+}
+catch {
 
     products = defaultProducts;
 
@@ -115,99 +146,94 @@ function addproduct(p) {
         document.getElementById("product-list");
 
 
-
-    /* CARD */
     const myDiv =
         document.createElement("div");
 
-    myDiv.setAttribute(
-        "class",
-        "product-item"
-    );
-
+    myDiv.className =
+        "product-item";
 
 
     /* IMAGE */
+
     const imgDiv =
         document.createElement("div");
 
-    imgDiv.setAttribute(
-        "class",
-        "product-image"
-    );
+    imgDiv.className =
+        "product-image";
 
     const img =
         document.createElement("img");
 
-    img.setAttribute("src", p.img);
+    img.src = p.img;
 
     imgDiv.appendChild(img);
 
 
-
     /* INFO */
+
     const infoDiv =
         document.createElement("div");
 
-    infoDiv.setAttribute(
-        "class",
-        "product-info"
-    );
+    infoDiv.className =
+        "product-info";
 
 
+    /* NAME */
 
-    /* TÊN */
     const p1 =
         document.createElement("p");
 
-    p1.setAttribute(
-        "class",
-        "book-name"
-    );
+    p1.className =
+        "book-name";
 
     p1.innerText = p.name;
 
 
+    /* PRICE */
 
-    /* GIÁ */
     const p2 =
         document.createElement("p");
 
-    p2.setAttribute(
-        "class",
-        "book-price"
-    );
+    p2.className =
+        "book-price";
 
     p2.innerText =
-        Number(p.price).toLocaleString("vi-VN")
+        Number(p.price)
+            .toLocaleString("vi-VN")
         + " VND";
 
 
+    /* LINK */
 
-    /* LINK CHI TIẾT */
     const link =
         document.createElement("a");
 
-    link.setAttribute(
-        "href",
-        p.productLink + "?id=" + p.id
-    );
+    link.href =
+        p.productLink + "?id=" + p.id;
 
     link.innerText =
         "Nhấn xem chi tiết";
 
 
+    /* BUTTON BOX */
 
-    /* BUTTON SỬA */
+    const btnBox =
+        document.createElement("div");
+
+    btnBox.className =
+        "btn-box";
+
+
+    /* EDIT */
+
     const editBtn =
         document.createElement("button");
 
-    editBtn.innerText = "Sửa";
+    editBtn.innerText =
+        "Sửa";
 
-    editBtn.setAttribute(
-        "class",
-        "edit-btn"
-    );
+    editBtn.className =
+        "edit-btn";
 
     editBtn.onclick = function (e) {
 
@@ -218,17 +244,16 @@ function addproduct(p) {
     };
 
 
+    /* DELETE */
 
-    /* BUTTON XÓA */
     const deleteBtn =
         document.createElement("button");
 
-    deleteBtn.innerText = "Xóa";
+    deleteBtn.innerText =
+        "Xóa";
 
-    deleteBtn.setAttribute(
-        "class",
-        "delete-btn"
-    );
+    deleteBtn.className =
+        "delete-btn";
 
     deleteBtn.onclick = function (e) {
 
@@ -239,51 +264,38 @@ function addproduct(p) {
     };
 
 
-
-    /* BOX BUTTON */
-    const btnBox =
-        document.createElement("div");
-
-    btnBox.setAttribute(
-        "class",
-        "btn-box"
-    );
-
     btnBox.appendChild(editBtn);
 
     btnBox.appendChild(deleteBtn);
 
 
-
-    /* GẮN */
     infoDiv.appendChild(p1);
 
     infoDiv.appendChild(p2);
 
     infoDiv.appendChild(link);
 
+
+    /* chỉ sách custom mới hiện nút */
+
     if (p.custom === true) {
 
-    infoDiv.appendChild(btnBox);
+        infoDiv.appendChild(btnBox);
 
-}
-
+    }
 
 
     myDiv.appendChild(imgDiv);
 
     myDiv.appendChild(infoDiv);
 
-
-
     productList.appendChild(myDiv);
 
 }
 
 
-
 /* =========================
-   LOAD TOÀN BỘ
+   LOAD ALL
 ========================= */
 
 function loadAllproducts() {
@@ -302,97 +314,6 @@ function loadAllproducts() {
 }
 
 
-
-/* =========================
-   THÊM SÁCH
-========================= */
-
-function addNewProduct() {
-
-    const name =
-        document.getElementById("name").value;
-
-    const price =
-        document.getElementById("price").value;
-
-    const desc =
-        document.getElementById("desc").value;
-
-    const fileInput =
-        document.getElementById("img");
-
-    const file =
-        fileInput.files[0];
-
-
-
-    if (name === "" || price === "" || !file) {
-
-        alert("Vui lòng nhập đầy đủ!");
-
-        return;
-
-    }
-
-
-
-    const reader =
-        new FileReader();
-
-    reader.onload = function (e) {
-
-        const newProduct = {
-
-            id: Date.now(),
-
-            name: name,
-
-            price: price,
-
-            img: e.target.result,
-
-            productLink: "sanpham.html",
-
-            desc: desc,
-            custom: true
-
-        };
-
-
-
-        products.push(newProduct);
-
-
-
-        saveData();
-
-        loadAllproducts();
-
-
-
-        /* RESET */
-        document.getElementById("name").value = "";
-
-        document.getElementById("price").value = "";
-
-        document.getElementById("img").value = "";
-
-        document.getElementById("desc").value = "";
-
-
-
-        alert("Đã thêm sách!");
-
-    };
-
-
-
-    reader.readAsDataURL(file);
-
-}
-
-
-
 /* =========================
    XÓA
 ========================= */
@@ -404,18 +325,17 @@ function deleteProduct(id) {
             p => p.id === id
         );
 
+    if (index !== -1) {
 
+        products.splice(index, 1);
 
-    products.splice(index, 1);
+        saveData();
 
+        loadAllproducts();
 
-
-    saveData();
-
-    loadAllproducts();
+    }
 
 }
-
 
 
 /* =========================
@@ -425,7 +345,9 @@ function deleteProduct(id) {
 function editProduct(id) {
 
     const product =
-        products.find(p => p.id === id);
+        products.find(
+            p => p.id === id
+        );
 
     editId = id;
 
@@ -439,9 +361,13 @@ function editProduct(id) {
         product.desc;
 
     document.getElementById("openAddsach").checked = true;
+
 }
 
 
+/* =========================
+   THÊM / SỬA
+========================= */
 
 function saveProduct() {
 
@@ -461,8 +387,20 @@ function saveProduct() {
         fileInput.files[0];
 
 
+    /* ===== VALIDATE ===== */
 
-    /* ===== SỬA ===== */
+    if (name === "" || price === "") {
+
+        alert("Vui lòng nhập đầy đủ!");
+
+        return;
+
+    }
+
+
+    /* =====================
+       SỬA
+    ===================== */
 
     if (editId !== null) {
 
@@ -477,35 +415,52 @@ function saveProduct() {
 
         product.desc = desc;
 
-        saveData();
 
-        loadAllproducts();
+        /* nếu chọn ảnh mới */
 
-        editId = null;
+        if (file) {
 
-        /* RESET FORM */
-        document.getElementById("name").value = "";
+            const reader =
+                new FileReader();
 
-        document.getElementById("price").value = "";
+            reader.onload = function (e) {
 
-        document.getElementById("img").value = "";
+                product.img = e.target.result;
 
-        document.getElementById("desc").value = "";
+                saveData();
 
-        document.getElementById("openAddsach").checked = false;
+                loadAllproducts();
+
+            };
+
+            reader.readAsDataURL(file);
+
+        } else {
+
+            saveData();
+
+            loadAllproducts();
+
+        }
+
+
+        resetForm();
 
         return;
+
     }
 
 
+    /* =====================
+       THÊM
+    ===================== */
 
-    /* ===== THÊM ===== */
+    if (!file) {
 
-    if (name === "" || price === "" || !file) {
-
-        alert("Vui lòng nhập đầy đủ!");
+        alert("Vui lòng chọn ảnh!");
 
         return;
+
     }
 
     const reader =
@@ -526,8 +481,8 @@ function saveProduct() {
             productLink: "sanpham.html",
 
             desc: desc,
+
             custom: true
-        
 
         };
 
@@ -537,11 +492,37 @@ function saveProduct() {
 
         loadAllproducts();
 
-        document.getElementById("openAddsach").checked = false;
+        resetForm();
+
+        alert("Đã thêm sách!");
+
     };
 
     reader.readAsDataURL(file);
+
 }
+
+
+/* =========================
+   RESET FORM
+========================= */
+
+function resetForm() {
+
+    editId = null;
+
+    document.getElementById("name").value = "";
+
+    document.getElementById("price").value = "";
+
+    document.getElementById("img").value = "";
+
+    document.getElementById("desc").value = "";
+
+    document.getElementById("openAddsach").checked = false;
+
+}
+
 
 /* =========================
    RESET DATABASE
@@ -556,12 +537,19 @@ function resetDatabase() {
 }
 
 
-
 /* =========================
    AUTO LOAD
 ========================= */
 
 window.onload = function () {
+
+    if (!localStorage.getItem("products")) {
+
+        products = defaultProducts;
+
+        saveData();
+
+    }
 
     loadAllproducts();
 
