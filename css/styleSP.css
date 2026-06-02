@@ -587,3 +587,69 @@ body {
     font-size:17px;
 }
 
+@media screen and (max-width: 768px){
+
+    .header{
+        padding: 15px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .menu{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .menu a{
+        margin-left: 0;
+        font-size: 16px;
+    }
+
+    .logo{
+        font-size: 18px;
+    }
+
+    #product-list,
+    #sale-list{
+        width: 100%;
+        padding-left: 0;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .box-product-list{
+        padding-left: 0;
+    }
+
+    .product-item{
+        width: 160px;
+    }
+
+    .product-image,
+    .product-image img{
+        height: 220px;
+    }
+
+    .book-name{
+        font-size: 18px;
+    }
+
+    .book-price{
+        font-size: 16px;
+    }
+
+    .add-form{
+        width: 95%;
+    }
+
+    .add-form textarea{
+        width: 100%;
+    }
+
+    .footer-container{
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}
