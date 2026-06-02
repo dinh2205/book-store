@@ -6,6 +6,8 @@ body{
     margin:0;
     padding:0;
 
+    background:#111827;
+    
 background-image:
 
 linear-gradient(
@@ -20,7 +22,7 @@ linear-gradient(
     rgba(0,0,0,0.05) 100%
 ),
 
-url('../assets/sachnen.jpg');
+url('../assets/heroGioiThieu.png');
 
     background-size:cover;
 
@@ -347,14 +349,3 @@ url('../assets/sachnen.jpg');
 }
 
 
-
-.copyright{
-
-    background:rgba(234, 158, 8, 0.326);
-
-    color:white;
-
-    padding:10px;
-
-    font-size:14px;
-}

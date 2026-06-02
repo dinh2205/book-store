@@ -1,0 +1,131 @@
+<!Doctype html>
+<!-- update -->
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <title> Sản Phẩm </title>
+    <link rel="stylesheet" href="../css/styleSP.css">
+    <script src="../js/libSP.js"></script>
+
+</head>
+
+
+
+<body>
+
+    <input type="checkbox" id="openLogin" hidden>
+    <header class="header">
+        <div class="logo">📚 Book Store</div>
+
+        <nav class="menu">
+            <a href="../index.html">Trang Chủ</a>
+
+             <a href="gioi-thieu.html">Giới Thiệu</a>
+
+            <a href="san-pham.html">Sản Phẩm</a>
+
+            <a href="lien-he.html">Liên Hệ</a>
+        </nav>
+
+        <label for="openLogin" class="btn-login">Đăng nhập</label>
+    </header>
+
+
+    <div class="login-modal">
+        <div class="login-box">
+
+            <!-- nút đóng -->
+            <label for="openLogin" class="close-btn">✖</label>
+
+            <form>
+                <label for="tk">Tài khoản:</label><br>
+                <input type="text" id="tk" name="tk"><br>
+
+                <label for="mk">Mật Khẩu:</label><br>
+                <input type="password" id="mk" name="mk"><br><br>
+
+                <input type="submit" value="Đăng Nhập">
+
+                <div class="login-links">
+                    <a href="#">Forgot password?</a>
+                    <a href="#">Create account</a>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+
+   <h2 class="section-title">📚 SÁCH MỚI</h2>
+
+    <div class="box-product-list">
+        <div id="product-list"> </div>
+    </div>
+
+    <h2 class="section-title">🔥 KHUYẾN MÃI</h2>
+     <div class="box-product-list">
+    <div id="sale-list"></div>
+    </div>
+    
+    <input type="checkbox" id="openAddsach" hidden>
+
+    <label for="openAddsach" class="btn-watch" onclick="editId = null">
+
+        Thêm Sách
+
+    </label>
+
+    <div class="add-modal">
+
+        <div class="add-form">
+            <label for="openAddsach" class="closeadd-btn">✖</label>
+
+            <h1 style="color: white;"> Thêm Sách Mới</h1>
+            <input type="text" id="name" placeholder="Tên sách">
+
+            <input type="number" id="price" placeholder="Giá sách">
+
+            <input type="file" id="img" accept="image/*">
+
+            <textarea id="desc" placeholder="Mô tả sách"></textarea>
+
+            <button class="btn-watchh" onclick="saveProduct()">
+                Thêm sách
+            </button>
+        </div>
+    </div>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-col">
+                <h3>Trần Quốc Đỉnh</h3>
+            </div>
+
+            <div class="footer-col">
+                <h3>MSSV: 110124033</h3>
+            </div>
+
+            <div class="footer-col">
+                <h3>DA24TTA - Công Nghệ Thông Tin</h3>
+            </div>
+
+            <div class="footer-col">
+                <h3>Email: quocdinhvta@gmail.com</h3>
+            </div>
+
+        </div>
+
+    </footer>
+
+
+</body>
+
+
+
+</html>
