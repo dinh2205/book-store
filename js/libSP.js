@@ -606,33 +606,26 @@ function addproduct(p, container) {
 function loadAllproducts() {
 
     const productList = document.getElementById("product-list");
+    const saleList = document.getElementById("sale-list");
 
     productList.innerHTML = "";
-
-    const saleList =
-        document.getElementById("sale-list");
-
     saleList.innerHTML = "";
 
-    // 4 sách đầu = sách mới
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < products.length; i++) {
 
-        if (products[i]) {
+        if (products[i].badge?.includes("Giảm")) {
+
+            addproduct(products[i], saleList);
+
+        } else {
 
             addproduct(products[i], productList);
 
         }
-    }
-
-    // 4 sách sau = khuyến mãi
-    for (let i = 4; i < products.length; i++) {
-
-        addproduct(products[i], saleList);
 
     }
 
 }
-
 
 
 //XÓA 

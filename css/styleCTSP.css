@@ -413,23 +413,20 @@
 /* ================= FOOTER ================= */
 
 .footer{
-
+    width: 100%;
     background:rgba(0,0,0,0.8);
-
     color:white;
-
-    padding:20px 20px;
+    padding:20px;
+    bottom: 0;
+    position: fixed;
 }
 
 .footer-container{
 
     display:flex;
+    align-items:center;
 
     justify-content:space-between;
-
-    flex-wrap:wrap;
-
-    gap:20px;
 }
 
 .footer-col h3{
@@ -448,8 +445,12 @@ body {
     margin: 0;
     padding: 0;
     background:
-        linear-gradient(rgba(0, 0, 0, 0.6),
-            rgba(0, 0, 0, 0.3)),
+        linear-gradient(rgba(0, 0, 0, 0.4),
+            rgba(0, 0, 0, 0.5)),
         url('../assets/sachnen.jpg');
     background-size: cover;
+}
+
+* {
+    box-sizing: border-box;
 }

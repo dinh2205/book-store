@@ -218,24 +218,25 @@ body {
 
 .box-product-list{
     width: 100%;
-    max-width: 1200px;
+    max-width: 1300px;
+    padding-left: 50px;
 }
 #product-list {
     width: 90%;
-    margin: 40px auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 60px;
+    gap: 50px;
+    padding-top: 20px;
+    padding-left: 90px;
 }
 
 #sale-list {
     width: 90%;
-    margin: 40px auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 60px;
+    gap: 50px;
+    padding-top: 20px;
+    padding-left: 90px;
 }
 
 .old-price{
@@ -564,12 +565,16 @@ body {
 /* ================= FOOTER ================= */
 
 .footer{
+    width: 100%;
 
     background:rgba(0,0,0,0.8);
 
     color:white;
 
     padding:20px 20px;
+
+
+    bottom: 0;
 }
 
 .footer-container{
@@ -577,10 +582,7 @@ body {
     display:flex;
 
     justify-content:space-between;
-
-    flex-wrap:wrap;
-
-    gap:20px;
+    align-items:center;
 }
 
 .footer-col h3{

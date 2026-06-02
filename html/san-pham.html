@@ -4,7 +4,9 @@
 
 <head>
     <meta charset="utf-8">
-    <title> Sản Phẩm </title>
+    <title>Sản Phẩm </title>
+
+    <link rel="icon" type="image/jpg" href="../assets/LogoTVU.jpg">
     <link rel="stylesheet" href="../css/styleSP.css">
     <script src="../js/libSP.js"></script>
 
@@ -56,11 +58,19 @@
         </div>
     </div>
 
+    <input type="checkbox" id="openAddsach" hidden>
 
    <h2 class="section-title">📚 SÁCH MỚI</h2>
 
     <div class="box-product-list">
         <div id="product-list"> </div>
+
+        <label for="openAddsach" class="btn-watch" onclick="editId = null">
+
+        Thêm Sách
+
+    </label>
+
     </div>
 
     <h2 class="section-title">🔥 KHUYẾN MÃI</h2>
@@ -68,13 +78,8 @@
     <div id="sale-list"></div>
     </div>
     
-    <input type="checkbox" id="openAddsach" hidden>
 
-    <label for="openAddsach" class="btn-watch" onclick="editId = null">
 
-        Thêm Sách
-
-    </label>
 
     <div class="add-modal">
 
