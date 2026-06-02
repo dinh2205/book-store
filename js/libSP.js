@@ -820,20 +820,11 @@ function resetDatabase() {
 //AUTO LOAD
 window.onload = function () {
 
-    let data =
-    JSON.parse(localStorage.getItem("products"));
+    localStorage.removeItem("products");
 
-    if (!data || data.length === 0) {
+    products = [...defaultProducts];
 
-        products = [...defaultProducts];
-
-        saveData();
-
-    } else {
-
-        products = data;
-
-    }
+    saveData();
 
     loadAllproducts();
 
