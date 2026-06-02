@@ -565,24 +565,19 @@ body {
 /* ================= FOOTER ================= */
 
 .footer{
-    width: 100%;
-
+      width:100%;
     background:rgba(0,0,0,0.8);
-
     color:white;
-
-    padding:20px 20px;
-
-
-    bottom: 0;
+    padding:20px;
+    margin-top:50px;
 }
 
 .footer-container{
 
     display:flex;
+    align-items:center;
 
     justify-content:space-between;
-    align-items:center;
 }
 
 .footer-col h3{

@@ -818,25 +818,24 @@ function resetDatabase() {
 
 
 //AUTO LOAD
-
 window.onload = function () {
 
-    if (!localStorage.getItem("products")) {
+    let data =
+    JSON.parse(localStorage.getItem("products"));
 
-        products = defaultProducts;
+    if (!data || data.length === 0) {
+
+        products = [...defaultProducts];
 
         saveData();
 
-    }
+    } else {
 
-    // Load sản phẩm khi có product-lít
-    if (document.getElementById("product-list")) {
-
-        loadAllproducts();
+        products = data;
 
     }
 
-    // load giỏ hàng
+    loadAllproducts();
+
     loadCart();
-
 };
