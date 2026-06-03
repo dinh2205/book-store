@@ -816,17 +816,26 @@ function resetDatabase() {
 
 
 
-
 //AUTO LOAD
 window.onload = function () {
 
-    localStorage.removeItem("products");
+    let data =
+        JSON.parse(localStorage.getItem("products"));
 
-    products = [...defaultProducts];
+    if (!data || data.length === 0) {
 
-    saveData();
+        products = [...defaultProducts];
+
+        saveData();
+
+    } else {
+
+        products = data;
+
+    }
 
     loadAllproducts();
 
     loadCart();
+
 };
