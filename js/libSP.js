@@ -126,7 +126,7 @@ let defaultProducts = [
         price: "99000",
 
         oldPrice: "120000",
-        
+
         badge: "Giảm 18%",
 
         img: "../assets/sach7.jpg",
@@ -161,13 +161,12 @@ let defaultProducts = [
     }
 ];
 
-
 let products = [];
 let editId = null;
 
 
 
-/*  SAVE LOCALSTORAGE */
+//Lưu Dữ Liệu
 
 function saveData() {
 
@@ -175,7 +174,7 @@ function saveData() {
 
 }
 
-/* Reload Data */
+//Reload Data
 
 function reloadData() {
 
@@ -186,7 +185,7 @@ function reloadData() {
 }
 
 
-//====== GIỎ HÀNG==========//
+// GIỎ HÀNG
 
 
 function getCart() {
@@ -199,13 +198,12 @@ function addToCart(productId) {
 
     // tìm sản phẩm
     const product = products.find(p => p.id === productId);
-
     if (!product) return;
 
     // kiểm tra đã có trong giỏ chưa
     const cartItem = cart.find(item => item.id === productId);
 
-    // nếu có sản phẩm tăng số lượng
+    // tăn số lượng nếu đã có
     if (cartItem) {
 
         cartItem.quantity++;
@@ -213,7 +211,6 @@ function addToCart(productId) {
     }
     else {
 
-        // chưa có thêm mới
         cart.push({
 
             id: product.id,
@@ -230,7 +227,6 @@ function addToCart(productId) {
 
     }
 
-    // lưu localstorage
     localStorage.setItem("cart",
         JSON.stringify(cart)
     );
@@ -417,7 +413,7 @@ function removeCartItem(id) {
 }
 
 
-//==== KHỞI TẠO DỮ LIỆU====//
+//KHỞI TẠO DỮ LIỆU
 
 
 try {
@@ -446,7 +442,7 @@ catch {
 
 
 
-//=== HIỂN THỊ 1 SẢN PHẨM==//
+//HIỂN THỊ 1 SẢN PHẨM
 
 
 
@@ -470,15 +466,15 @@ function addproduct(p, container) {
     //Badge
     if (p.badge) {
 
-    const badge = document.createElement("span");
+        const badge = document.createElement("span");
 
-    badge.className = "badge";
+        badge.className = "badge";
 
-    badge.innerText = p.badge;
+        badge.innerText = p.badge;
 
-    imgDiv.appendChild(badge);
+        imgDiv.appendChild(badge);
 
-}
+    }
 
     //Info 
 
@@ -602,11 +598,14 @@ function addproduct(p, container) {
 
 
 //LOAD ALL
-
 function loadAllproducts() {
 
     const productList = document.getElementById("product-list");
     const saleList = document.getElementById("sale-list");
+
+    if (!productList || !saleList) {
+        return;
+    }
 
     productList.innerHTML = "";
     saleList.innerHTML = "";
@@ -624,7 +623,6 @@ function loadAllproducts() {
         }
 
     }
-
 }
 
 
@@ -834,8 +832,13 @@ window.onload = function () {
 
     }
 
-    loadAllproducts();
 
-    loadCart();
+    if (document.getElementById("product-list")) {
+        loadAllproducts();
+    }
+
+    if (document.getElementById("cart-list")) {
+        loadCart();
+    }
 
 };

@@ -1,53 +1,50 @@
-
 * {
     box-sizing: border-box;
 }
 
-body{
-    margin:0;
-    padding:0;
+body {
+    margin: 0;
+    padding: 0;
 }
 
 
 
-.bg-video{
+.bg-video {
 
-    position:fixed;
+    position: fixed;
 
-    inset:0;
+    inset: 0;
 
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
 
-    object-fit:cover;
+    object-fit: cover;
 
-    z-index:-2;
+    z-index: -2;
 }
 
 
 
-body::before{
+body::before {
 
-    content:"";
+    content: "";
 
-    position:fixed;
+    position: fixed;
 
-    inset:0;
+    inset: 0;
 
     background:
-        linear-gradient(
-            to right,
+        linear-gradient(to right,
 
-            rgba(0,0,0,0.45) 0%,
+            rgba(0, 0, 0, 0.45) 0%,
 
-            rgba(0,0,0,0.25) 35%,
+            rgba(0, 0, 0, 0.25) 35%,
 
-            rgba(0,0,0,0.1) 65%,
+            rgba(0, 0, 0, 0.1) 65%,
 
-            rgba(0,0,0,0) 100%
-        );
+            rgba(0, 0, 0, 0) 100%);
 
-    z-index:-1;
+    z-index: -1;
 }
 
 
@@ -72,7 +69,7 @@ body::before{
 
 .logo {
     color: white;
-     font-size: 22px;
+    font-size: 22px;
     font-weight: 700;
     letter-spacing: 1px;
 }
@@ -82,7 +79,7 @@ body::before{
 .menu {
     display: flex;
     align-items: center;
-    gap:45px;
+    gap: 45px;
 }
 
 
@@ -116,15 +113,11 @@ body::before{
 }
 
 
-/* Hover login */
-
 .btn-login:hover {
     background: #facc15;
     color: black;
     border-color: #facc15;
 }
-
-
 
 
 .login-modal {
@@ -160,7 +153,7 @@ body::before{
 }
 
 
-/* Nút đóng modal */
+/* X đnhap */
 
 .close-btn {
     position: absolute;
@@ -172,7 +165,7 @@ body::before{
 }
 
 
-/* Ô nhập tài khoản + mật khẩu */
+/* ô tk mk*/
 
 .login-box input[type="text"],
 .login-box input[type="password"] {
@@ -203,8 +196,6 @@ body::before{
 }
 
 
-/* Hover input */
-
 .login-box input:hover {
     border-color: orange;
     transform: scale(1.05);
@@ -212,9 +203,7 @@ body::before{
 
 
 
-/* =======================================================
-   LOGIN LINKS
-======================================================= */
+/*  LOGIN LINKS */
 
 .login-links {
 
@@ -227,23 +216,18 @@ body::before{
     font-size: 13px;
 }
 
-
-/* Link forgot password */
+/*link đky*/
 
 .login-links a {
     color: #2563eb;
     text-decoration: none;
 }
 
-
-/* Hover link */
-
 .login-links a:hover {
     text-decoration: underline;
 }
 
-.contact 
-{
+.contact {
     background: rgba(8, 79, 66, 0.75);
     color: white;
     padding: 30px;
@@ -265,51 +249,51 @@ textarea {
     padding: 10px;
     border-radius: 6px;
     border: 1px solid rgba(255, 255, 255, 0.2);
-    
+
     font-size: 16px;
 }
 
 .contact input[type="submit"] {
-  margin-top: 20px;
-  padding: 10px 20px;
-  background:rgba(48, 46, 46, 0.307);
-  color: rgb(255, 255, 255);
-  border: none;
-  width: 30%;
-  border-radius: 8px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: 0.25s;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: rgba(48, 46, 46, 0.307);
+    color: rgb(255, 255, 255);
+    border: none;
+    width: 30%;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.25s;
 }
 
 .contact input[type="submit"]:hover {
-  background: #07821fe1;
-  transform: scale(1.05);
-  color: black;
+    background: #07821fe1;
+    transform: scale(1.05);
+    color: black;
 }
 
-/* ================= FOOTER ================= */
+/* FOOTER */
 
 
-.footer{
-      width:100%;
-    background:rgba(0,0,0,0.8);
-    color:white;
-    padding:20px;
-    margin-top:50px;
+.footer {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    margin-top: 50px;
 }
 
-.footer-container{
+.footer-container {
 
-    display:flex;
-    align-items:center;
+    display: flex;
+    align-items: center;
 
-    justify-content:space-between;
+    justify-content: space-between;
 }
 
-.footer-col h3{
+.footer-col h3 {
 
-    margin:0;
+    margin: 0;
 
-    font-size:17px;
+    font-size: 17px;
 }

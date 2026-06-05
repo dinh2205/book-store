@@ -1,16 +1,16 @@
-*{
-    box-sizing:border-box;
+* {
+    box-sizing: border-box;
 }
 
-body{
-    margin:0;
-    padding:0;
+body {
+    margin: 0;
+    padding: 0;
     background: #040c2f;
 }
 
 
 
-/* ================= HEADER ================= */
+/* HEADER */
 
 .header {
     width: 100%;
@@ -32,7 +32,7 @@ body{
 
 .logo {
     color: white;
-     font-size: 22px;
+    font-size: 22px;
     font-weight: 700;
     letter-spacing: 1px;
 }
@@ -42,7 +42,7 @@ body{
 .menu {
     display: flex;
     align-items: center;
-    gap:45px;
+    gap: 45px;
 }
 
 
@@ -75,8 +75,6 @@ body{
     transition: 0.3s;
 }
 
-
-/* Hover login */
 
 .btn-login:hover {
     background: #facc15;
@@ -120,7 +118,7 @@ body{
 }
 
 
-/* Nút đóng modal */
+/* X đnhap */
 
 .close-btn {
     position: absolute;
@@ -132,7 +130,7 @@ body{
 }
 
 
-/* Ô nhập tài khoản + mật khẩu */
+/* Ô tk mk*/
 
 .login-box input[type="text"],
 .login-box input[type="password"] {
@@ -142,8 +140,6 @@ body{
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-
-/* Nút submit */
 
 .login-box input[type="submit"] {
 
@@ -163,7 +159,6 @@ body{
 }
 
 
-/* Hover input */
 
 .login-box input:hover {
     border-color: orange;
@@ -172,9 +167,7 @@ body{
 
 
 
-/* =======================================================
-   LOGIN LINKS
-======================================================= */
+/* LOGIN LINKS */
 
 .login-links {
 
@@ -188,7 +181,6 @@ body{
 }
 
 
-/* Link forgot password */
 
 .login-links a {
     color: #2563eb;
@@ -196,7 +188,6 @@ body{
 }
 
 
-/* Hover link */
 
 .login-links a:hover {
     text-decoration: underline;
@@ -206,191 +197,189 @@ body{
 
 
 
-/* ================= FOOTER ================= */
+/* FOOTER */
 
-.footer{
+.footer {
 
-    background:rgba(0,0,0,0.8);
+    background: rgba(0, 0, 0, 0.8);
 
-    color:white;
+    color: white;
 
-    padding:20px 20px;
+    padding: 20px 20px;
 
-    margin-top:auto;
+    margin-top: auto;
 }
 
-.footer-container{
+.footer-container {
 
-    display:flex;
+    display: flex;
 
-    justify-content:space-between;
+    justify-content: space-between;
 
-    flex-wrap:wrap;
+    flex-wrap: wrap;
 
-    gap:20px;
-    
+    gap: 20px;
+
 }
 
-.footer-col h3{
+.footer-col h3 {
 
-    margin:0;
+    margin: 0;
 
-    font-size:18px;
+    font-size: 18px;
 }
 
-.footerr{
+.footerr {
     width: 100%;
     padding-bottom: 100px;
 }
 
-/* ================= TITLE ================= */
+/* TITLE  */
 
-.hero-content p{
+.hero-content p {
 
-    width:80%;
+    width: 80%;
 
-    margin:40px auto;
+    margin: 40px auto;
 
-    font-size:21px;
+    font-size: 21px;
 
-    line-height:1.9;
+    line-height: 1.9;
 
-    text-align:center;
+    text-align: center;
 }
 
 
-.hero-content{
-    display:flex;
+.hero-content {
+    display: flex;
     padding: 20px 20px;
-    color:white;
+    color: white;
 }
 
 
-.image-container{
+.image-container {
 
-    width:100%;
+    width: 100%;
 
-    height:300px;
+    height: 300px;
 
-    margin:0 auto;
+    margin: 0 auto;
 
-    border-radius:20px;
+    border-radius: 20px;
 
-    box-shadow:0 0 20px rgba(0,0,0,0.5);
-}
-.image-container img{
-
-    width:100%;
-
-    height:300px;
-
-    object-fit:cover;
-    object-position:top;
-    box-shadow:0 0 20px rgba(0,0,0,0.5);
-
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
-.image-container1 img{
+.image-container img {
 
-    width:100%;
+    width: 100%;
 
-    height:300px;
+    height: 300px;
 
-    object-fit:cover;
-    box-shadow:0 0 20px rgba(0,0,0,0.5);
+    object-fit: cover;
+    object-position: top;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 
 }
 
+.image-container1 img {
 
-.mission{
+    width: 100%;
 
-    width:90%;
+    height: 300px;
 
-    margin:100px auto;
+    object-fit: cover;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 
-    display:flex;
+}
 
-    justify-content:center;
 
-    gap:40px;
+.mission {
 
-    flex-wrap:wrap;
+    width: 90%;
+
+    margin: 100px auto;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 40px;
+
+    flex-wrap: wrap;
 }
 
 /* Card */
 
-.mission-card{
+.mission-card {
 
-    width:320px;
+    width: 320px;
 
-    background:rgba(255,255,255,0.05);
+    background: rgba(255, 255, 255, 0.05);
 
-    border:1px solid rgba(250,204,21,0.3);
+    border: 1px solid rgba(250, 204, 21, 0.3);
 
-    border-radius:20px;
+    border-radius: 20px;
 
-    padding:35px 25px;
+    padding: 35px 25px;
 
-    text-align:center;
+    text-align: center;
 
-    color:white;
+    color: white;
 
-    transition:0.4s;
+    transition: 0.4s;
 
-    box-shadow:0 0 20px rgba(0,0,0,0.4);
-    cursor:pointer;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
 }
 
-/* Hover */
 
-.mission-card:hover{
+.mission-card:hover {
 
-    transform:translateY(-10px);
+    transform: translateY(-10px);
 
-    border-color:#facc15;
+    border-color: #facc15;
 }
 
-/* Icon */
 
-.icon{
+.icon {
 
-    font-size:55px;
+    font-size: 55px;
 
-    margin-bottom:20px;
+    margin-bottom: 20px;
 }
 
 /* Tiêu đề */
 
-.mission-card h2{
+.mission-card h2 {
 
-    color:#facc15;
+    color: #facc15;
 
-    font-size:26px;
+    font-size: 26px;
 
-    margin-bottom:20px;
+    margin-bottom: 20px;
 }
 
 /* Nội dung */
 
-.mission-card p{
+.mission-card p {
 
-    font-size:18px;
+    font-size: 18px;
 
-    line-height:1.7;
+    line-height: 1.7;
 
-    color:#eaedf0;
+    color: #eaedf0;
 }
 
-.slogan{
-margin:100px auto;
-  width:90%;
-  text-align:center;
-  background:rgba(255,255,255,0.05);
-  border:1px solid rgba(250,204,21,0.3);
-  color:rgb(220, 183, 20);
-  font-size:24px;
-  border-radius:20px;
-  padding:20px;
-box-shadow:0 0 20px rgba(243, 255, 7, 0.475);
+.slogan {
+    margin: 100px auto;
+    width: 90%;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(250, 204, 21, 0.3);
+    color: rgb(220, 183, 20);
+    font-size: 24px;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(243, 255, 7, 0.475);
 }
-
